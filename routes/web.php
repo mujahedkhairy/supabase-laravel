@@ -2,8 +2,6 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NotificationController;
-
-
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,7 +18,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/notifications/form', [NotificationController::class, 'showNotificationForm'])->name('notification.form');
     Route::post('/send_notification_all', [NotificationController::class, 'sendNotificationToAll']);
-
 });
 
 require __DIR__.'/auth.php';
