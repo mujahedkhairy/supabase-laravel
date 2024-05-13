@@ -15,16 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::middleware('auth:api')->group(function () {
-    Route::get('/profile', 'ProfileController@show')->name('api.profile.show');
-    Route::put('/profile', 'ProfileController@update')->name('api.profile.update');
-    Route::delete('/profile', 'ProfileController@destroy')->name('api.profile.destroy');
+// Route::middleware('auth:api')->group(function () {
+//     Route::get('/profile', 'ProfileController@show')->name('api.profile.show');
+//     Route::put('/profile', 'ProfileController@update')->name('api.profile.update');
+//     Route::delete('/profile', 'ProfileController@destroy')->name('api.profile.destroy');
 
     // Notification routes
-    Route::get('/notifications/form', 'NotificationController@showNotificationForm')->name('api.notification.form');
-    Route::post('/send_notification_all', 'NotificationController@sendNotificationToAll')->name('api.notification.send_all');
-});
+//     Route::get('/notifications/form', 'NotificationController@showNotificationForm')->name('api.notification.form');
+//     Route::post('/send_notification_all', 'NotificationController@sendNotificationToAll')->name('api.notification.send_all');
+// });
